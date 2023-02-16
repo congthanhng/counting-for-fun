@@ -17,6 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    - run: git pull
     - name: Create sample file with just timestamp
       run: date +%s >> report.txt
     - name: Commit file
