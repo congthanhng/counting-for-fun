@@ -18,7 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Create sample file with just timestamp
-      run: date +%s >> counting.txt
+      run: time date >> counting.txt
     - name: Commit file
       run: |
         git config --global user.name 'Cong Automated Counting'
