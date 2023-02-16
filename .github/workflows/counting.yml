@@ -18,12 +18,11 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Create sample file with just timestamp
-      run: date +%s >> report.txt
+      run: date +%s >> counting.txt
     - name: Commit file
       run: |
         git config --global user.name 'Cong Automated Counting'
         git config --global user.email '15138747+congthanhng@users.noreply.github.com'
-        git pull
         git add counting.txt
         git commit -am "Automated counting"
         git push -f
