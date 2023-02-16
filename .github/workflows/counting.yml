@@ -12,24 +12,17 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   auto_report:
-    # The type of runner that the job will run on
     name: 'Auto counting and push the change to my repo'
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
-      - name: Create sample file with just timestamp
-        run: date +%s >> counting.txt
-
-      - name: Commit file
-        run: |
-          git config --global user.name 'Cong Automated Counting'
-          git config --global user.email '15138747+congthanhng@users.noreply.github.com'
-          git add counting.txt
-          git commit -am "Automated counting"
-          git push
+    - uses: actions/checkout@v3
+    - name: Create sample file with just timestamp
+      run: date +%s >> counting.txt
+    - name: Commit file
+      run: |
+        git config --global user.name 'Cong Automated Counting'
+        git config --global user.email '15138747+congthanhng@users.noreply.github.com'
+        git add counting.txt
+        git commit -am "Automated counting"
+        git push
