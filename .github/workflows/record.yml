@@ -6,7 +6,7 @@ name: Record Time
 on:
   schedule:
     - cron: '30 9-16 * * 6,0'
-    - cron: '8,16,24,32,40,48,54 1-23 * * 1-5'
+    - cron: '16,32,48,54 1-23 * * 1-5'
     
 jobs:
   auto_record:
