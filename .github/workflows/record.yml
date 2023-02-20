@@ -5,8 +5,8 @@ name: Record Time
 # Controls when the workflow will run
 on:
   schedule:
-    - cron: '30 9-16 * * 6,0'
-    - cron: '16,32,48,54 1-23 * * 1-5'
+    - cron: '45 13-15 * * 6,0'
+    - cron: '39 8-12 * * 1-5'
     
 jobs:
   auto_record:
